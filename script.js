@@ -43,15 +43,15 @@ let checkOrder = () => {
 			break;
 		}
 	}
-	if(clickedOrder.lenght == order.length) {
-		alert('Pontuação: ${score}\nVocê acertou! Iniciando próximo nível');
+	if(clickedOrder.length == order.length) {
+		alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível`);
 		nextLevel();
 	}
 }
 
 // função para o clique do usuário
 let click = (color) => {
-	clikedOrder[clickedOrder.lenght] = color;
+	clickedOrder[clickedOrder.length] = color;
 	createColorElement(color).classList.add('selected');
 
 	setTimeout(() => {
@@ -83,7 +83,7 @@ let nextLevel = () => {
 // função para game over
 
 let gameOver = () => {
-	alert('Pontuação: ${score}\nVocê perdeu o jogo!\nClique OK para iniciar novo jogo!');
+	alert(`Pontuação: ${score}\nVocê perdeu o jogo!\nClique OK para iniciar novo jogo!`);
 	order = [];
 	clickeOrder = [];
 
